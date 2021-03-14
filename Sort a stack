@@ -1,0 +1,10 @@
+def sorted(s):
+    res=[]
+    while(len(s)!=0):
+        x=s.pop()
+        res.append(x)
+    res.sort(reverse=True)
+    
+    for i in range (len(res)):
+        s.append(res[i])
+    return(s)
