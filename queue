@@ -1,0 +1,22 @@
+def inqueue(queue,n):
+    queue.append(n)
+
+def dequeue(queue):
+    if len(queue)==0:
+        print("queue is empty")
+    else:
+        queue.pop(0)
+
+
+queue=[]
+inqueue(queue,1)
+inqueue(queue,12)
+inqueue(queue,15)
+inqueue(queue,17)
+inqueue(queue,14)
+print(queue)
+print("**************")
+dequeue(queue)
+dequeue(queue)
+print(queue)
+print("********************")
