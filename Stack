@@ -1,0 +1,28 @@
+def push(nums,n):
+    nums.append(n)
+    return(nums)
+
+def pop(nums):
+    if len(nums)==0:
+        print("stack is empty")
+    else:
+        nums.pop()
+        return(nums)
+
+nums=[]
+push(nums,1)
+push(nums,5)
+push(nums,15)
+print(nums)
+print("*****************")
+pop(nums)
+pop(nums)
+pop(nums)
+print(nums)
+print("*****************")
+pop(nums)
+print(nums)
+print("*****************")
+
+
+
