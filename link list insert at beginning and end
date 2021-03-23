@@ -1,0 +1,45 @@
+class Node:
+  def __init__(self,info,link=None):
+    self.info=info
+    self.link=link
+
+class linkedlist:
+  def __init__(self):
+    self.head=None
+
+  def begg(self,info):
+    newnode=Node(info) #create new node
+    if self.head!=None:
+      newnode.link=self.head
+      self.head=newnode
+    else:
+      self.head=newnode 
+
+  def end(self,info):
+    newnode=Node(info)
+    if self.head!=None:
+      curr=self.head
+      while(curr.link!=None):
+        curr=curr.link
+      curr.link=newnode
+    else:
+        self.head=newnode
+
+
+   
+
+  def disp(self):
+    curr=self.head
+    while(curr!=None):
+      print(curr.info)
+      curr=curr.link
+
+ll=linkedlist()
+ll.begg(10)
+ll.begg(20)
+ll.disp()
+print("*******")
+ll.end(30)
+ll.end(40)
+ll.disp()
+print("*******")
