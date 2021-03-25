@@ -1,0 +1,13 @@
+    def rotate(self, head, k):
+        tail=head
+        p=head
+        while(tail.next):
+            tail=tail.next
+        
+        while(k-1):
+            p=p.next
+            k=k-1
+        tail.next=head
+        head=p.next
+        p.next=None
+        return(head)
