@@ -1,0 +1,10 @@
+def reverseList(self, head):
+        curr=head
+        prev=None
+        while(curr):
+            save=curr.next
+            curr.next=prev
+            prev=curr
+            curr=save
+        curr=prev
+        return(curr)
